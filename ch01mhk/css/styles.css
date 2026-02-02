@@ -1,0 +1,179 @@
+/*Mandisa Harris-King*/
+
+* { /*Resets spacing and makes sizing more predictable. Affects everything on the page*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e09845;
+    background-image: url(../images/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed; /*background image does not move*/
+    font-family: cursive;
+}
+
+
+/*Beginning of Mobile-first design*/
+
+.heading { /*handles styles for header and nav*/
+    text-align: center;
+    background-color:#d5bdafd2;
+    margin: 0;
+    padding: 0;
+}
+
+/*header styles*/
+header {
+    width: 100%;
+    padding: 2em 0; /*Short-hand for top/bottom and left/right*/
+}
+
+header h1 {
+    font-size: 2rem;
+    padding-bottom: .5em;
+}
+
+header p {
+    font-family: sans-serif; /*Overrides the body font-family.*/
+    font-style: italic;
+}
+
+/*Navigation styles*/
+nav ul {
+    list-style: none; /*removes the bullet points*/
+    text-align: center;
+    padding: .2em;
+}
+
+nav a {
+    text-decoration: none; /*removes the underline*/
+    color: inherit;
+}
+
+nav li:active {
+    background-color: rgb(41, 39, 39);
+    color: white;
+    text-decoration: underline;
+}
+
+nav li {
+    padding-bottom: .2em;
+    border-bottom: 1px solid;
+    width: 100%;
+}
+
+/*Main section styles still mobile first*/
+main {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+#wrapper { /*ID Selectors are only used once because they are unique to a specific area on the page. It should not be used in the footer */
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.welcomemsg {
+    margin: 2em 0;
+    padding: 1em;
+    background-color: rgba(240, 248, 255, 0.808);
+    font-style: italic;
+    border: 4px solid black;
+}
+
+aside blockquote {
+    margin: 0;
+    padding: 0 10px;
+    color:rgb(195, 191, 228);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+cite {
+    display: block;
+    margin-top: 10px;
+}
+
+.featured {
+    display: block;
+    background-color: #d5bdafdc;
+    margin: 3em 0;
+    padding: 2em;
+    border: 4px solid black;
+}
+
+.featured h2 {
+    padding-bottom: 25px;
+    font-style: italic;
+}
+
+.featured article h3 {
+    padding: 15px 0;
+}
+
+/*handles styles for images 1 and 2*/
+img {
+    display: block;
+    width: 80%;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto; /*SHORT HAND REQUIREMENT: for top/bottom and left/right*/
+    border-radius: 50%;
+}
+
+.invitation { 
+    margin: 15px 0; /*Short-hand for top/bottom and left/right*/
+    padding: 35px;
+    background-color: rgba(240, 248, 255, 0.808); /*semi-transparent background*/
+    font-style: italic;
+    border: 4px solid black; /*adds border around invitation section*/
+    margin-bottom: 50px;
+}
+
+.invitation h2 {
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+p {
+    color: black;
+}
+
+.invitation p {
+    color: rgb(219, 68, 68) !important; /*The !important overrides the color set for the p element. However, this should be used sparingly because the further you get into your css styles it can be harder to make changes.*/
+    font-weight: bold;
+}
+/*End of Mobile Support*/
+
+
+footer {
+    padding: 10px 0;
+    margin: 0;
+    background-color:#d5bdafd2;
+    text-align: center;
+}
+
+/*At-Support || if a browser understands grid layout it will render the below. If not, the fallback styles are listed above*/
+@supports (display: grid) {
+    #wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+/*Tablet Support*/
+@media (min-width: 768px) {
+    @supports (display: grid) {
+        #wrapper {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 20px;
+        }
+    }
+}
