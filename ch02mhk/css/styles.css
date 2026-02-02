@@ -1,0 +1,182 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/*setting the :root selector for the whole document*/
+:root { /*REQUIREMENT: 3 custom properties*/
+    --color-text: #f1edf1; /*font color*/
+    --bg-color: #45503b; /*background of the sections*/
+    --text-family: sans-serif;
+}
+    
+body{ 
+    background-color: #b098a4;
+    font-family: var(--text-family); /*utilizing the font family declared above in the root*/
+}
+
+/*header styles*/
+
+.masthead { /*REQUIREMENT: Create a masthead using viewport units*/
+    background-color: var(--bg-color);
+    text-align: center;
+    height: 20vh; /*20% of the viewport height*/
+    width: 100vw;/*100% of the viewport width*/
+}
+
+header h1 {
+    padding: .5em;
+    font-style: italic;
+    color: var(--color-text);
+}
+
+/*navigation links styles*/
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    padding: .2em;
+}
+
+nav a {
+    text-decoration: none; /*removes the underline*/
+    color: var(--color-text) /*uses the set color*/
+}
+
+nav li {
+    display: inline-block; /*places the nav links in a row*/
+    padding: 1.5em .5em 0; 
+    cursor: pointer;
+}
+
+/*main styles*/
+#about {
+    text-align: left;
+    padding: 1.5em;
+    font-style: italic;
+}
+
+#about h2 {
+    padding-bottom: .5em;
+}
+
+main {
+    margin: 1em;
+}
+
+aside {
+    padding: 1em;
+    margin: 2em auto;
+    background-color: var(--bg-color);
+    border: 1px ridge black;
+    color: var(--color-text)
+}
+
+.em-list { /*REQUIREMENT: Nested em value without causing a shrinking problem*/
+    font-size: 1em; /*em inherits from the parent; setting the base to start at 1em or 16px*/
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+.em-list ul {
+    font-size: 1em; /*the nested em normally shrinks. This will reset the ul to 1em which will prevent the links from shrinking*/
+    margin-left: 1em;
+}
+
+.gallery {
+    margin-bottom: 2em;
+}
+h3 {
+    text-decoration: underline;
+}
+
+h4 {
+    font-style: italic;
+}
+
+p {
+    padding: .5em;
+    margin: .2em;
+}
+
+img {
+    display: block;
+    width: 50vmin;
+    height: 50vmin;
+    margin: 1em auto;
+    border: 2px solid black;
+}
+
+.rem-list { /*REQUIREMENT: Nested rem value without causing a shrinking problem*/
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+.rem-list ul { /*the font-size takes the root value of 16px instead of inheriting from the parent*/
+    font-size: 1em;
+    margin-left: 1em;
+}
+
+.fact {
+    background-color: #dbd9db;
+    padding: 1em;
+    border: 1px solid black;
+    margin-bottom: 3em; 
+}
+
+.fact h2 {
+    margin-bottom: 1em;
+}
+
+footer {
+    background-color: var(--bg-color);
+    padding: .5em 0;
+    margin: 0;
+    text-align: center;
+}
+
+/*REQUIREMENT: CREATE A MEDIA QUERY FOR TABLET AND DESKTOP AND CHANGE FONT-SIZE AND BACKGROUND COLOR*/
+
+@media (min-width:768px) { /*media query for tablets*/
+    :root {
+        --back-color: black;
+        --text-size: 1.5rem;
+    }
+
+    body {
+        background-color: var(--back-color);
+        font-size: var(--text-size);
+        color: white;
+    }
+
+    .masthead {
+        width: 100vw;
+        height: 22vh;
+    }
+
+    .fact {
+        color: black; 
+    }
+}
+
+@media (min-width:992px) { /*for laptops/desktops and up*/
+    body {
+        background-image: url(../images/desktop.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-attachment: fixed;
+        font-size: 2rem;
+        color: black;
+    }
+
+    .masthead {
+        height: 28vh;
+    }
+
+}
+
+
+
