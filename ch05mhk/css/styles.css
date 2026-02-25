@@ -1,0 +1,272 @@
+/* Chapter 5 Assignment requirements:
+use the flexbox navigation and add the portfolio page to navigation
+add 7 images portfolio page using grid
+update Chapter 4 website to have grid display for all the page layout require commenting*/
+
+
+*,
+::before,
+::after  { /*reset all default browser styles for all elements*/
+        box-sizing: border-box;
+        /*outline: 2px solid red;*/
+}
+
+
+/*MOBILE FIRST CSS STYLES*/
+:root {
+    --text-size: calc(1rem + 1vw);
+}
+
+body {
+    margin: unset;
+    background-color: #d4a373;
+    font-size: var(--text-size);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(27, 26, 26);
+}
+
+#container { /*grid layout for all pages*/
+    background-color: #faedcd;
+    display: grid; 
+    grid-template-areas: 
+    "header"
+    "nav"
+    "main"
+    "aside"
+    "footer";
+    grid-template-columns: 1fr; /*mobile first design*/
+    width: 95%;
+    margin: 0 auto;
+}
+
+/*setting grid areas for layout*/
+header {
+    grid-area: header;
+    background-color: #e9edc9;
+}
+
+nav {
+    grid-area: nav;
+}
+
+main {
+    grid-area: main;
+}
+
+aside {
+    grid-area: aside;
+    margin: 0 auto;
+    padding: 2em;
+    width: 100%;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #e9edc9;
+    border-top: 2px solid #d4a373;
+    text-align: left;
+    padding: 1rem;
+    font-size: calc(1rem + .5vw);
+}
+
+/*header styles*/
+header h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/*Navigation styles*/
+.flex-nav { /*REQUIRED: Use flexbox navigation*/
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-nav > li {
+    text-align: center;
+    font-size: calc(.5rem + 2vw);
+}
+
+nav ul {
+    list-style-type: none; /*removes bullet points*/
+    margin: 0;
+    padding: 1em;
+    gap: 0.5rem;
+    text-transform: uppercase;
+    border-top: 2px solid #d4a373;
+}
+
+nav a {
+    text-decoration: none; /*removes the underline*/
+    color: black;
+}
+
+/*Main styles*/
+
+h2 {
+    text-align: center;
+    font-style: italic;
+}
+
+.services {
+    margin: 2rem;
+}
+
+main section,
+main aside {
+    padding: 1rem;
+}
+
+
+/*Image styles*/
+img { /*make all images responsive and fit within their containers*/
+    width: 100%;
+}
+
+/*form styles*/
+input, textarea {
+    display: block;
+    width: 100%; /*keeps the input and textarea in their containers*/
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: auto;
+    width: 100%; /*make form responsive and fit within its container*/
+    max-width: 45rem;
+    gap: .5em;
+}
+
+
+/*footer styles*/
+footer ul {
+    list-style-type: none;
+}
+
+/*icon styles*/
+
+.icons {
+    color: rgba(175, 50, 12, 0.767);
+}
+
+/*Media Queries for Tablet and Desktop*/
+
+/*---Tablet--*/
+@media (min-width: 600px) {
+    :root {
+        font-size: calc(.1rem + 1vw)
+    }
+
+    /*navigation styles for tablet*/
+    .flex-nav {
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+    }
+
+    nav li {
+        border-right: 2px solid rgb(58, 175, 204);
+        margin: 0 auto;
+        padding: .5rem;
+    }
+
+    nav li.contact-link {
+        border-right: none;
+    }
+
+
+    #container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: 
+        "header header"
+        "nav nav"
+        "main aside"
+        "footer footer";
+        gap: 1.5em;
+    }
+
+    main section {
+        margin: 0 2rem;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    .portfolio-images { /*Styles for portfolio images*/
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .portfolio-images img {
+        width: 100%;
+        height: 200px;
+        object-fit: contain;
+    }
+}
+
+/*--Desktop--*/
+@media (min-width: 1024px) {
+    :root {
+        font-size: .5rem;
+    }
+
+    #container {
+        width: 80vw;
+    }
+
+    nav li {
+        border-right: 2px solid rgb(58, 175, 204);
+    }
+
+    main section {
+        margin: 0 2rem;
+    }
+
+    .services { /*styles ul on the services page*/
+        margin-left: 25rem;
+    }
+
+    /*form styles*/
+    input, textarea {
+        display: block;
+        font-size: 2.5rem;
+        width: 100%; /*keeps the input and textarea in their containers*/
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        height: auto;
+        width: 100%; /*make form responsive and fit within its container*/
+        max-width: 60rem;
+        gap: .5em;
+    }
+
+    form button {
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    .portfolio-images { /*Styles for portfolio images*/
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .portfolio-images img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+
+
+
+
+
+
+
