@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mandisa Harris-King">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Cella's Antique Shop - Feature of the Week</title>
+</head>
+<body>
+    <div class="container">
+        <header> <!--Header section-->
+            <div class="top-banner"> <!--Button for modal-->
+                <button id="open" type="button">
+                    Newsletter Sign-Up
+                </button>
+           </div>
+            <h1>Feature of the Week</h1>
+
+            <nav class="menu" id="main-menu"> <!--Navigation bar-->
+                <button class="menu-toggle" id="toggle-menu">Toggle Menu</button>
+                    <div class="menu-dropdown">
+                        <ul class="nav-menu flex-nav">
+                            <li><a href="index.html">About</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="featured.html">Feature of the Week</a></li>
+                            <li><a href="blogs.html">Blogs</a></li>
+                            <li><a href="portfolio.html">Portfolio</a></li> <!--added portfolio page to navigation-->
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+            </nav>
+        </header>
+        <!--container for modal-->
+        <div class="modal" id="modal" role="dialog" aria-modal="true">
+            <!--modal contents-->
+            <div class="modal-backdrop"></div>
+            <div class="modal-body">
+                <button class="modal-close" id="close" type="button">Close</button>
+                <p>Sign up for our monthly newsletter to stay up-to-date on our latest arrivals and much more!</p>
+
+                <form>
+                    <p>
+                        <label for="email">Email Address:</label>
+                        <input type="text" id="email" name="email">
+                    </p>
+                    <p><button type="submit">Submit</button></p>
+                </form>
+            </div>
+        </div>
+            <main class="main-content"><!--Main section--> 
+                
+                <article>
+                    <h2>Spotlight Items</h2>
+                        <figure>
+                            <img class="spotlight" src="images/artwork1.webp" alt="Tsuba made of iron. Inlaid in silver and gold with a large millipede, on other side the Seta Bridge.">
+                            <figcaption>Photographs of Japanese Sword Guards (1916)</figcaption>
+                        </figure>
+                        <p>In the mid-1890s, after health problems forced him to give up landscape painting, Georg Oeder (b. Aachen, Germany, 1846) threw himself into collecting Japanese art and artifacts — above all ukiyo-e prints and sword guards (tsuba). His collection of tsuba, which was one of the most extensive in the world at the time, was photographed and printed in a catalogue published in 1916. 
+                            This catalogue is now almost all that remains of Oeder&apos;s collection, most of which was auctioned off or lost after his death in 1931.</p>
+                </article>
+                
+                <article>
+                        <figure>
+                            <img  class="spotlight" src="images/artwork2.webp" alt="A traditional East Asian-style illustration of a blue bird standing on stylized waves beneath colorful clouds and a red sun.">
+                            <figcaption>Albert Racinet&apos;s L&apos;Ornement Polychrome (1869&dash;73)</figcaption>
+                        </figure>
+                        <p>Albert-Charles-Auguste Racinet (1825&dash;1893), himself an accomplished artist, is best known today for publishing two major pictorial works on the history of design — Le costume historique and L'Ornement polychrome — while engraver and artistic director at the Parisian publisher Firmin Didot et Cie. Published in ten instalments between 1869 and 1873, the first iteration of L'Ornement polychrome (Colour ornament) is a visual record in 100 plates of the decorative arts from antiquity to the eighteenth century. The work was such a huge success that in 1885&dash;7 Racinet brought out a second series, this time of 120 plates, and updated to include designs of the nineteenth century as well. The imagery presented in both series is drawn from a wide array of various mediums, including woodwork, metalwork, architecture, textiles, painting, and pottery, and from cultures all over the world.</p>
+                
+                        <figure>
+                            <img class="spotlight" src="images/painting.webp" alt="A vintage illustration showing multiple numbered diagrams of color theory and light, alongside a small scenic landscape.">
+                            <figcaption>Goethe Colour Chart: Johann Wolfgang von Goethe, 1810</figcaption>
+                        </figure>
+                </article>
+            
+                <aside>
+                    <h3>Follow us on social media</h3>
+                        <p>Want to stay up-to-date on our latest items? Follow us!</p>
+                        <a class="icons" href="#"><i class="fa fa-instagram"></i></a>
+                        <a class="icons" href="#"><i class="fa fa-envelope"></i></a>
+                        <a class="icons" href="#"><i class="fa fa-facebook"></i></a>
+                        <a class="icons" href="#"><i class="fa fa-twitter"></i></a>
+                </aside>
+            </main>
+
+        <footer>
+            <strong>&copy; 2026 Cella&apos;s Antique Shop Created by Mandisa Harris-King.</strong>
+            <p>Images courtesy of:</p>
+            <ul>
+                <li>Photo by <a href="https://unsplash.com/@pawel_czerwinski?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pawel Czerwinski</a> on <a href="https://unsplash.com/photos/black-and-brown-rotary-phone-near-gray-wall--0xCCPIbl3M?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></li>
+                <li>Owner Photo by <a href="https://unsplash.com/@ageing_better?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Centre for Ageing Better</a> on <a href="https://unsplash.com/photos/a-woman-sitting-on-top-of-a-wooden-chair-s0dH4O14E1Q?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></li>
+                <li>Photo by <a href="https://unsplash.com/@retrosupply?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">RetroSupply</a> on <a href="https://unsplash.com/photos/vintage-teal-typewriter-beside-book-jLwVAUtLOAQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></li>
+                <li>Photo by <a href="https://unsplash.com/@robert_lens?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Robert | Visual Diary</a> on <a href="https://unsplash.com/photos/antique-shop-interior-with-vintage-furniture-and-mirrors-3KNrZ7ssKFY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></li>    
+            </ul>
+            <p>Public domain materials courtesy of <a href="https://publicdomainreview.org/">The Public Domain Review.</a></p>
+            <p>This fictional website was built as part of a web development course. The objective of this assignment was to understand responsive design. We explored how to create a responsive design by using a mobile-first approach and using media queries to design for bigger devices such as tablets and desktops.</p>
+        </footer>
+    </div>
+        
+    <script src="js/menu.js"></script>
+    <script src="js/modal.js"></script>
+</body>
+</html>
